@@ -16,7 +16,17 @@ classifiers = [
     "License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)",
     "Operating System :: OS Independent",
 ]
-dependencies = []
+dependencies = [
+  "grip-py",
+  "httpx>=0.27",
+  "PySide6>=6.6",
+]
+
+[project.scripts]
+grip-pyrolyze-demo = "grip_pyrolyze.examples.demo.main:main"
+
+[tool.uv.sources]
+grip-py = { path = "../grip-py", editable = true }
 
 [project.urls]
 Homepage = "https://github.com/owebeeone/grip-pyrolyze-examples"
@@ -29,7 +39,7 @@ dependencies = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/grip_pyrolyze_examples"]
+packages = ["src/grip_pyrolyze"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -3,11 +3,17 @@
 Example scripts, notebooks, and small apps demonstrating `grip-pyrolyze` and PyRolyze.
 
 - **PyPI project name:** `grip-pyrolyze-examples`
-- **Import package:** `grip_pyrolyze_examples`
+- **Import path:** `grip_pyrolyze.examples.demo` (extends the `grip_pyrolyze` namespace alongside the `grip-pyrolyze` package)
 - **Build backend:** hatchling
 - **License:** LGPL-2.1-or-later (see `LICENSE`)
 
-Add runtime dependencies in `pyproject.toml` (`dependencies`) as you publish real examples (for example `grip-pyrolyze`, `pyrolyze`, `PySide6`).
+The PySide6 GRIP demo from `grip-py-demo` lives at import path `grip_pyrolyze.examples.demo`. Run it after install:
+
+```bash
+grip-pyrolyze-demo
+```
+
+or `python -m grip_pyrolyze.examples.demo.main` with `PYTHONPATH=src`.
 
 ## Local development
 

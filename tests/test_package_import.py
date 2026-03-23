@@ -1,4 +1,4 @@
-def test_import_package() -> None:
-    import grip_pyrolyze_examples
+def test_import_demo_namespace() -> None:
+    import grip_pyrolyze.examples.demo
 
-    assert grip_pyrolyze_examples.__doc__
+    assert grip_pyrolyze.examples.demo.__name__ == "grip_pyrolyze.examples.demo"
