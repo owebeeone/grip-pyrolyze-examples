@@ -25,6 +25,9 @@ dependencies = [
 [project.scripts]
 grip-pyrolyze-demo = "grip_pyrolyze.examples.demo.main:main"
 
+[tool.uv]
+exclude-newer = "1 week"
+
 [tool.uv.sources]
 grip-py = { path = "../grip-py", editable = true }
 
